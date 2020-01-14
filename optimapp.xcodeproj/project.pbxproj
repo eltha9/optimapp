@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA18039323CDD4DB003B4D3B /* TopMenuTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18039223CDD4DB003B4D3B /* TopMenuTable.swift */; };
+		DA03688823CE669600491CFC /* SouvenirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688723CE669600491CFC /* SouvenirViewController.swift */; };
+		DA03688A23CE66AA00491CFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688923CE66AA00491CFC /* MapViewController.swift */; };
+		DA03688C23CE66C400491CFC /* VoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688B23CE66C400491CFC /* VoyageViewController.swift */; };
+		DA03688E23CE6AC900491CFC /* MapTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */; };
+		DAC6F90D23CE702F0093BF4B /* TopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F90C23CE702F0093BF4B /* TopTableView.swift */; };
 		DAFD1EDB23CC857600E7FC7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD1EDA23CC857600E7FC7D /* AppDelegate.swift */; };
-		DAFD1EDD23CC857600E7FC7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD1EDC23CC857600E7FC7D /* ViewController.swift */; };
 		DAFD1EE023CC857600E7FC7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFD1EDE23CC857600E7FC7D /* Main.storyboard */; };
 		DAFD1EE223CC857700E7FC7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFD1EE123CC857700E7FC7D /* Assets.xcassets */; };
 		DAFD1EE523CC857700E7FC7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFD1EE323CC857700E7FC7D /* LaunchScreen.storyboard */; };
@@ -35,10 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA18039223CDD4DB003B4D3B /* TopMenuTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuTable.swift; sourceTree = "<group>"; };
+		DA03688723CE669600491CFC /* SouvenirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenirViewController.swift; sourceTree = "<group>"; };
+		DA03688923CE66AA00491CFC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DA03688B23CE66C400491CFC /* VoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageViewController.swift; sourceTree = "<group>"; };
+		DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTopTableViewCell.swift; sourceTree = "<group>"; };
+		DAC6F90C23CE702F0093BF4B /* TopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableView.swift; sourceTree = "<group>"; };
 		DAFD1ED723CC857600E7FC7D /* optimapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = optimapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFD1EDA23CC857600E7FC7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAFD1EDC23CC857600E7FC7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAFD1EDF23CC857600E7FC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAFD1EE123CC857700E7FC7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAFD1EE423CC857700E7FC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,12 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				DAFD1EDA23CC857600E7FC7D /* AppDelegate.swift */,
-				DAFD1EDC23CC857600E7FC7D /* ViewController.swift */,
 				DAFD1EDE23CC857600E7FC7D /* Main.storyboard */,
+				DA03688723CE669600491CFC /* SouvenirViewController.swift */,
+				DA03688923CE66AA00491CFC /* MapViewController.swift */,
+				DA03688B23CE66C400491CFC /* VoyageViewController.swift */,
 				DAFD1EE123CC857700E7FC7D /* Assets.xcassets */,
 				DAFD1EE323CC857700E7FC7D /* LaunchScreen.storyboard */,
+				DAC6F90C23CE702F0093BF4B /* TopTableView.swift */,
 				DAFD1EE623CC857700E7FC7D /* Info.plist */,
-				DA18039223CDD4DB003B4D3B /* TopMenuTable.swift */,
+				DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */,
 			);
 			path = optimapp;
 			sourceTree = "<group>";
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAFD1EDD23CC857600E7FC7D /* ViewController.swift in Sources */,
-				DA18039323CDD4DB003B4D3B /* TopMenuTable.swift in Sources */,
 				DAFD1EDB23CC857600E7FC7D /* AppDelegate.swift in Sources */,
+				DA03688A23CE66AA00491CFC /* MapViewController.swift in Sources */,
+				DA03688823CE669600491CFC /* SouvenirViewController.swift in Sources */,
+				DAC6F90D23CE702F0093BF4B /* TopTableView.swift in Sources */,
+				DA03688C23CE66C400491CFC /* VoyageViewController.swift in Sources */,
+				DA03688E23CE6AC900491CFC /* MapTopTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
