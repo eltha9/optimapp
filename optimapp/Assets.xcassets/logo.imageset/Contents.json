@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "crosshair.png",
+      "filename" : "logox1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "crosshair-1.png",
+      "filename" : "logox2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "crosshairx3.png",
+      "filename" : "logox3.png",
       "scale" : "3x"
     }
   ],

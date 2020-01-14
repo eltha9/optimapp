@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import MapKit
 
 
 class ViewController: UIViewController {
     
-    
+    static let sections = ["Resto","Culture","Insolite","famille","romantique", "découverte"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
 
+    
 
 }
 

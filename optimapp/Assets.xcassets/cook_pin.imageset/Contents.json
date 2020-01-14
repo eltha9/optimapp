@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "crosshair.png",
+      "filename" : "cook_pinx1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "crosshair-1.png",
+      "filename" : "cook_pinx2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "crosshairx3.png",
+      "filename" : "cook_pinx3.png",
       "scale" : "3x"
     }
   ],
