@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,29 +15,43 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="optimapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" showsPointsOfInterest="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QFh-HC-sh1">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Où allons nous" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acn-Ar-a1v">
+                                <rect key="frame" x="20" y="30" width="342" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="fVx-N6-6lI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8J-M0-mMT">
+                                <rect key="frame" x="370" y="30" width="44" height="44"/>
+                                <state key="normal" image="crosshair"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QFh-HC-sh1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HY0-Nf-lES"/>
-                            <constraint firstItem="QFh-HC-sh1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VOB-H0-wZW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QFh-HC-sh1" secondAttribute="bottom" id="f9n-JY-HUD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QFh-HC-sh1" secondAttribute="trailing" id="vvY-xO-bee"/>
+                            <constraint firstItem="F8J-M0-mMT" firstAttribute="leading" secondItem="acn-Ar-a1v" secondAttribute="trailing" constant="178" id="6ax-3C-nvG"/>
+                            <constraint firstItem="F8J-M0-mMT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="8Gf-F6-N5j"/>
+                            <constraint firstItem="F8J-M0-mMT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="Kfs-Mf-NlM"/>
+                            <constraint firstItem="F8J-M0-mMT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="dsd-ai-tdj"/>
+                            <constraint firstItem="acn-Ar-a1v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fTI-m1-mcF"/>
+                            <constraint firstItem="F8J-M0-mMT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="gAp-mE-SAn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F8J-M0-mMT" secondAttribute="trailing" constant="20" id="r1s-ax-wNh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F8J-M0-mMT" secondAttribute="trailing" constant="20" id="vwI-Bf-Obd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="map_test" destination="QFh-HC-sh1" id="Wnt-oV-Tx5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
+            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="crosshair" width="24" height="24"/>
+    </resources>
 </document>
