@@ -14,7 +14,7 @@ class MapViewController: UIViewController {
         ,TypeButton("insolite","insolite")
         ,TypeButton("famille","famille")
         ,TypeButton("romantique","romantique")
-        ,TypeButton("découverte","découverte")]
+        ,TypeButton("découverte","decouverte")]
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
