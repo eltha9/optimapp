@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26F0F247808C4E7E0E43A6AF /* Pods_optimapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A80847DCC038AB16355E5C8 /* Pods_optimapp.framework */; };
+		4051DD6A0DFE44DBABFCBD49 /* Pods_optimapp_optimappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CF30CE830FE17AFC19F067 /* Pods_optimapp_optimappUITests.framework */; };
 		DA03688823CE669600491CFC /* SouvenirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688723CE669600491CFC /* SouvenirViewController.swift */; };
 		DA03688A23CE66AA00491CFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688923CE66AA00491CFC /* MapViewController.swift */; };
 		DA03688C23CE66C400491CFC /* VoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688B23CE66C400491CFC /* VoyageViewController.swift */; };
 		DA03688E23CE6AC900491CFC /* MapTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */; };
 		DAC6F90D23CE702F0093BF4B /* TopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F90C23CE702F0093BF4B /* TopTableView.swift */; };
+		DAC6F90F23D0D3D30093BF4B /* SouvenirCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F90E23D0D3D30093BF4B /* SouvenirCell.swift */; };
+		DAC6F91123D0D8EB0093BF4B /* Souvenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F91023D0D8EB0093BF4B /* Souvenir.swift */; };
 		DAFD1EDB23CC857600E7FC7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD1EDA23CC857600E7FC7D /* AppDelegate.swift */; };
 		DAFD1EE023CC857600E7FC7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFD1EDE23CC857600E7FC7D /* Main.storyboard */; };
 		DAFD1EE223CC857700E7FC7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFD1EE123CC857700E7FC7D /* Assets.xcassets */; };
 		DAFD1EE523CC857700E7FC7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFD1EE323CC857700E7FC7D /* LaunchScreen.storyboard */; };
 		DAFD1EF023CC857800E7FC7D /* optimappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD1EEF23CC857800E7FC7D /* optimappTests.swift */; };
 		DAFD1EFB23CC857800E7FC7D /* optimappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD1EFA23CC857800E7FC7D /* optimappUITests.swift */; };
+		F1A3AFC8A509B7C986C7CE61 /* Pods_optimappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B28AA0D59E3B82716B59CE0 /* Pods_optimappTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +43,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B28AA0D59E3B82716B59CE0 /* Pods_optimappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_optimappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20B5B1E67C0751EE406BA92C /* Pods-optimappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-optimappTests.debug.xcconfig"; path = "Target Support Files/Pods-optimappTests/Pods-optimappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		34946BAFB6B426026DED7725 /* Pods-optimapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-optimapp.release.xcconfig"; path = "Target Support Files/Pods-optimapp/Pods-optimapp.release.xcconfig"; sourceTree = "<group>"; };
+		473F7D7E06A6A5CB8CB76DF0 /* Pods-optimappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-optimappTests.release.xcconfig"; path = "Target Support Files/Pods-optimappTests/Pods-optimappTests.release.xcconfig"; sourceTree = "<group>"; };
+		527B8D954370FF7EDC482D6D /* Pods-optimapp-optimappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-optimapp-optimappUITests.debug.xcconfig"; path = "Target Support Files/Pods-optimapp-optimappUITests/Pods-optimapp-optimappUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A80847DCC038AB16355E5C8 /* Pods_optimapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_optimapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBBCD585936E481FA6E006D6 /* Pods-optimapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-optimapp.debug.xcconfig"; path = "Target Support Files/Pods-optimapp/Pods-optimapp.debug.xcconfig"; sourceTree = "<group>"; };
+		C9A76DADBE766CD2C30217B3 /* Pods-optimapp-optimappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-optimapp-optimappUITests.release.xcconfig"; path = "Target Support Files/Pods-optimapp-optimappUITests/Pods-optimapp-optimappUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D6CF30CE830FE17AFC19F067 /* Pods_optimapp_optimappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_optimapp_optimappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA03688723CE669600491CFC /* SouvenirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenirViewController.swift; sourceTree = "<group>"; };
 		DA03688923CE66AA00491CFC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DA03688B23CE66C400491CFC /* VoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageViewController.swift; sourceTree = "<group>"; };
 		DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTopTableViewCell.swift; sourceTree = "<group>"; };
 		DAC6F90C23CE702F0093BF4B /* TopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableView.swift; sourceTree = "<group>"; };
+		DAC6F90E23D0D3D30093BF4B /* SouvenirCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenirCell.swift; sourceTree = "<group>"; };
+		DAC6F91023D0D8EB0093BF4B /* Souvenir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Souvenir.swift; sourceTree = "<group>"; };
 		DAFD1ED723CC857600E7FC7D /* optimapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = optimapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFD1EDA23CC857600E7FC7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAFD1EDF23CC857600E7FC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F0F247808C4E7E0E43A6AF /* Pods_optimapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1A3AFC8A509B7C986C7CE61 /* Pods_optimappTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +94,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4051DD6A0DFE44DBABFCBD49 /* Pods_optimapp_optimappUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10A90F702729648FA34A812A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A80847DCC038AB16355E5C8 /* Pods_optimapp.framework */,
+				D6CF30CE830FE17AFC19F067 /* Pods_optimapp_optimappUITests.framework */,
+				0B28AA0D59E3B82716B59CE0 /* Pods_optimappTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B260B62D0FFC7D2A8706DC74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBBCD585936E481FA6E006D6 /* Pods-optimapp.debug.xcconfig */,
+				34946BAFB6B426026DED7725 /* Pods-optimapp.release.xcconfig */,
+				527B8D954370FF7EDC482D6D /* Pods-optimapp-optimappUITests.debug.xcconfig */,
+				C9A76DADBE766CD2C30217B3 /* Pods-optimapp-optimappUITests.release.xcconfig */,
+				20B5B1E67C0751EE406BA92C /* Pods-optimappTests.debug.xcconfig */,
+				473F7D7E06A6A5CB8CB76DF0 /* Pods-optimappTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DAFD1ECE23CC857600E7FC7D = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +132,8 @@
 				DAFD1EEE23CC857800E7FC7D /* optimappTests */,
 				DAFD1EF923CC857800E7FC7D /* optimappUITests */,
 				DAFD1ED823CC857600E7FC7D /* Products */,
+				B260B62D0FFC7D2A8706DC74 /* Pods */,
+				10A90F702729648FA34A812A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,10 +156,12 @@
 				DA03688923CE66AA00491CFC /* MapViewController.swift */,
 				DA03688B23CE66C400491CFC /* VoyageViewController.swift */,
 				DAFD1EE123CC857700E7FC7D /* Assets.xcassets */,
+				DAC6F91023D0D8EB0093BF4B /* Souvenir.swift */,
 				DAFD1EE323CC857700E7FC7D /* LaunchScreen.storyboard */,
 				DAC6F90C23CE702F0093BF4B /* TopTableView.swift */,
-				DAFD1EE623CC857700E7FC7D /* Info.plist */,
 				DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */,
+				DAFD1EE623CC857700E7FC7D /* Info.plist */,
+				DAC6F90E23D0D3D30093BF4B /* SouvenirCell.swift */,
 			);
 			path = optimapp;
 			sourceTree = "<group>";
@@ -144,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAFD1EFF23CC857800E7FC7D /* Build configuration list for PBXNativeTarget "optimapp" */;
 			buildPhases = (
+				B21B82D65532AAF48C59811A /* [CP] Check Pods Manifest.lock */,
 				DAFD1ED323CC857600E7FC7D /* Sources */,
 				DAFD1ED423CC857600E7FC7D /* Frameworks */,
 				DAFD1ED523CC857600E7FC7D /* Resources */,
+				76AD9F7D9DC7A4CC2541E690 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAFD1F0223CC857800E7FC7D /* Build configuration list for PBXNativeTarget "optimappTests" */;
 			buildPhases = (
+				8DAAAB28F7DF8E65180701F4 /* [CP] Check Pods Manifest.lock */,
 				DAFD1EE723CC857700E7FC7D /* Sources */,
 				DAFD1EE823CC857700E7FC7D /* Frameworks */,
 				DAFD1EE923CC857700E7FC7D /* Resources */,
@@ -179,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAFD1F0523CC857800E7FC7D /* Build configuration list for PBXNativeTarget "optimappUITests" */;
 			buildPhases = (
+				80C28C6C0B9DB1197750DBF2 /* [CP] Check Pods Manifest.lock */,
 				DAFD1EF223CC857800E7FC7D /* Sources */,
 				DAFD1EF323CC857800E7FC7D /* Frameworks */,
 				DAFD1EF423CC857800E7FC7D /* Resources */,
+				B7F84113BD005AB01FF6F123 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +315,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76AD9F7D9DC7A4CC2541E690 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-optimapp/Pods-optimapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-optimapp/Pods-optimapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-optimapp/Pods-optimapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80C28C6C0B9DB1197750DBF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-optimapp-optimappUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DAAAB28F7DF8E65180701F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-optimappTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B21B82D65532AAF48C59811A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-optimapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7F84113BD005AB01FF6F123 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-optimapp-optimappUITests/Pods-optimapp-optimappUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-optimapp-optimappUITests/Pods-optimapp-optimappUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-optimapp-optimappUITests/Pods-optimapp-optimappUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DAFD1ED323CC857600E7FC7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,8 +427,10 @@
 				DA03688A23CE66AA00491CFC /* MapViewController.swift in Sources */,
 				DA03688823CE669600491CFC /* SouvenirViewController.swift in Sources */,
 				DAC6F90D23CE702F0093BF4B /* TopTableView.swift in Sources */,
+				DAC6F91123D0D8EB0093BF4B /* Souvenir.swift in Sources */,
 				DA03688C23CE66C400491CFC /* VoyageViewController.swift in Sources */,
 				DA03688E23CE6AC900491CFC /* MapTopTableViewCell.swift in Sources */,
+				DAC6F90F23D0D3D30093BF4B /* SouvenirCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +603,7 @@
 		};
 		DAFD1F0023CC857800E7FC7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBBCD585936E481FA6E006D6 /* Pods-optimapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -463,6 +621,7 @@
 		};
 		DAFD1F0123CC857800E7FC7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34946BAFB6B426026DED7725 /* Pods-optimapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +639,7 @@
 		};
 		DAFD1F0323CC857800E7FC7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20B5B1E67C0751EE406BA92C /* Pods-optimappTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -500,6 +660,7 @@
 		};
 		DAFD1F0423CC857800E7FC7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 473F7D7E06A6A5CB8CB76DF0 /* Pods-optimappTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +681,7 @@
 		};
 		DAFD1F0623CC857800E7FC7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 527B8D954370FF7EDC482D6D /* Pods-optimapp-optimappUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +701,7 @@
 		};
 		DAFD1F0723CC857800E7FC7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A76DADBE766CD2C30217B3 /* Pods-optimapp-optimappUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

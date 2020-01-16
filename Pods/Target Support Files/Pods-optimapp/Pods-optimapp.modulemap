@@ -1,0 +1,6 @@
+framework module Pods_optimapp {
+  umbrella header "Pods-optimapp-umbrella.h"
+
+  export *
+  module * { export * }
+}

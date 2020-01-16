@@ -1,0 +1,6 @@
+framework module Pods_optimapp_optimappUITests {
+  umbrella header "Pods-optimapp-optimappUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
