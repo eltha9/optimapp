@@ -27,26 +27,33 @@ class SouvenirViewController: UIViewController {
         
         tabBarItem = UITabBarItem(title: "Souvenirs", image: UIImage(named: "souvenir_tab_icon"), tag: 1)
         
-            Alamofire.request("http://app.elph.fr/optimapp/optimapp_back?q=user").responseJSON { (defaultDataResponse) in
+            Alamofire.request("https://elph.fr/optimapp_back/?q=user").responseJSON { (defaultDataResponse) in
                 switch defaultDataResponse.result {
                 case .success(let value):
 //                    let jsonDecoder = JSONDecoder()
                     let json = JSON(value)
                     do {
-//                        user_name.text = json
                         debugPrint(json)
                         
-                        
+//                        let avatarLink = json["avatar"].string!
+//                        
+//                        let tempName = json["name"].string!
+//                        let distance = json["distance"].int! / 1000
+//                        let countries = json["countries"].string!
+//                        
+//                        self.avatar.image = UIImage(named: avatarLink)
+//                        self.user_name.text = tempName
+//                        self.user_parcour.text = "\( distance )km - \(countries) km"
                         
                         
                     } catch let error {
                         print("error parsing JSON: \(error)")
-                        debugPrint(json)
+                        
                     }
                     
                 case .failure(let error):
                     print("error: \(error)")
-                    debugPrint(defaultDataResponse)
+                    
                 }
         }
     }
@@ -84,7 +91,17 @@ class SouvenirViewController: UIViewController {
         
     }
 
-    
+//    func jsonToString(json: AnyObject){
+//        do {
+//            let data1 =  try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted) // first of all convert json to the data
+//            let convertedString = String(data: data1, encoding: String.Encoding.utf8) // the data will be converted to the string
+//            print(convertedString) // <-- here is ur string
+//
+//        } catch let myJSONError {
+//            print(myJSONError)
+//        }
+//
+//    }
 }
 
 extension SouvenirViewController: UITableViewDataSource, UITableViewDelegate{
