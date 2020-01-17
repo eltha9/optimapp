@@ -18,26 +18,9 @@ class TypeButton {
     }
 }
 
-class MapTopTableViewCell: UITableViewCell {
-    static let identifier = "searchType"
-    @IBOutlet weak var typeButton: UIButton!
+class MapTopTableViewCell: UICollectionViewCell {
     
-    
-    var uniqCell: TypeButton! {
-        didSet {
-            self.typeButton.setTitle(uniqCell.buttonLabel, for: .normal)
-        }
-    }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var content: UILabel!
     
 
 }

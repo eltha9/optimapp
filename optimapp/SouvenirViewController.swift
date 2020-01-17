@@ -80,12 +80,14 @@ class SouvenirViewController: UIViewController {
       
         
         var temp:[Souvenir] = []
-        let cell = Souvenir( title: "test",image: "test_2" ,souvenirDate: 1579205087.00)
+        let cell = Souvenir( title: "Plage en Grèce",image: "test_2" ,souvenirDate: 1579205087.00)
         
         temp.append(cell)
-        temp.append(cell)
-        temp.append(cell)
-        temp.append(cell)
+        temp.append(Souvenir( title: "Plage en Grèce",image: "test_2" ,souvenirDate: 1579205087.00))
+        temp.append(Souvenir( title: "Manoir à Oslo",image: "test_2" ,souvenirDate: 1579785087.00))
+        temp.append(Souvenir( title: "Le Palais de Vladimir",image: "test_2" ,souvenirDate: 1573405087.00))
+        temp.append(Souvenir( title: "Amiens",image: "test_2" ,souvenirDate: 1579205087.00))
+        temp.append(Souvenir( title: "Le désert Australien",image: "test_2" ,souvenirDate: 1579213087.00))
         
         return temp
         
