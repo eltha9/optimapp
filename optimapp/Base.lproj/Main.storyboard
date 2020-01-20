@@ -425,7 +425,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" text="ou alons nous ? " translatesAutoresizingMaskIntoConstraints="NO" id="SG6-hA-PsX">
+                            <searchBar contentMode="redraw" text="où allons nous ? " translatesAutoresizingMaskIntoConstraints="NO" id="SG6-hA-PsX">
                                 <rect key="frame" x="20" y="74" width="310" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Bol-qs-uMD"/>

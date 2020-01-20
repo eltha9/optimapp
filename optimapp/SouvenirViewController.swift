@@ -30,20 +30,28 @@ class SouvenirViewController: UIViewController {
             Alamofire.request("https://elph.fr/optimapp_back/?q=user").responseJSON { (defaultDataResponse) in
                 switch defaultDataResponse.result {
                 case .success(let value):
-//                    let jsonDecoder = JSONDecoder()
+
                     let json = JSON(value)
                     do {
-                        debugPrint(json)
+//                        debugPrint(json)
                         
-//                        let avatarLink = json["avatar"].string!
-//                        
-//                        let tempName = json["name"].string!
-//                        let distance = json["distance"].int! / 1000
-//                        let countries = json["countries"].string!
-//                        
-//                        self.avatar.image = UIImage(named: avatarLink)
-//                        self.user_name.text = tempName
-//                        self.user_parcour.text = "\( distance )km - \(countries) km"
+                        let tempName = json["name"].string!
+                        let distance = json["distance"].int! / 1000
+                        let countries = json["countries"].int!
+                        
+                        self.user_name.text = tempName
+                        self.user_parcour.text = "\( distance )km - \(countries) pays"
+                        
+                        //set avatar
+                        let avatarLink = json["avatar"].string!
+                        
+                        let url = URL(string: avatarLink)
+                        let data = try? Data(contentsOf: url!)
+                        self.avatar.image = UIImage(data: data!)
+                        
+                        
+                        
+                        
                         
                         
                     } catch let error {
@@ -70,26 +78,56 @@ class SouvenirViewController: UIViewController {
         avatar.layer.cornerRadius = avatar.frame.size.width / 2
         avatar.clipsToBounds = true
     }
-    func user()
-    {
-        
-    }
-    
+
+    var souvenirs:[Souvenir] = []
     func addSouvenirs() -> [Souvenir]
     {
       
         
-        var temp:[Souvenir] = []
+//        var temp:[Souvenir] = []
         let cell = Souvenir( title: "Plage en Grèce",image: "test_2" ,souvenirDate: 1579205087.00)
         
-        temp.append(cell)
-        temp.append(Souvenir( title: "Plage en Grèce",image: "test_2" ,souvenirDate: 1579205087.00))
-        temp.append(Souvenir( title: "Manoir à Oslo",image: "test_2" ,souvenirDate: 1579785087.00))
-        temp.append(Souvenir( title: "Le Palais de Vladimir",image: "test_2" ,souvenirDate: 1573405087.00))
-        temp.append(Souvenir( title: "Amiens",image: "test_2" ,souvenirDate: 1579205087.00))
-        temp.append(Souvenir( title: "Le désert Australien",image: "test_2" ,souvenirDate: 1579213087.00))
+        Alamofire.request("https://elph.fr/optimapp_back/?q=user-events").responseJSON { (defaultDataResponse) in
+            switch defaultDataResponse.result {
+            case .success(let value):
+                
+                let json = JSON(value)
+                do {
+//                    debugPrint(json)
+                    
+                    
+                    for i in 0...(json.count - 1) {
+                        
+                        debugPrint(json[i]["title"])
+                        
+                        self.souvenirs.append(Souvenir(title: json[i]["title"].string! ,image: "test_2" ,souvenirDate: 34.00 ) )
+                        
+                    }
+                    
+                    
+                    
+                    debugPrint(self.souvenirs)
+                } catch let error {
+                    print("error parsing JSON: \(error)")
+                    
+                }
+                
+            case .failure(let error):
+                print("error: \(error)")
+                
+            }
+        }
         
-        return temp
+//        temp.append(cell)
+        
+//        temp.append(Souvenir( title: "Plage en Grèce",image: "test_2" ,souvenirDate: 1579205087.00))
+//        temp.append(Souvenir( title: "Manoir à Oslo",image: "test_2" ,souvenirDate: 1579785087.00))
+//        temp.append(Souvenir( title: "Le Palais de Vladimir",image: "test_2" ,souvenirDate: 1573405087.00))
+//        temp.append(Souvenir( title: "Amiens",image: "test_2" ,souvenirDate: 1579205087.00))
+//        temp.append(Souvenir( title: "Le désert Australien",image: "test_2" ,souvenirDate: 1579213087.00))
+        debugPrint(self.souvenirs)
+        return self.souvenirs
+        
         
     }
 
