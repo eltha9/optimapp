@@ -21,4 +21,6 @@ class Souvenir{
         self.souvenirDate = souvenirDate
         
     }
+    
+    
 }

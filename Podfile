@@ -7,7 +7,7 @@ target 'optimapp' do
 
   # Pods for optimapp
   pod 'Alamofire', '~> 4.9.1'
-  pod 'SwiftyJSON', '~> 3.1'
+  pod 'SwiftyJSON', '~> 4.0'
   target 'optimappTests' do
     inherit! :search_paths
     # Pods for testing
