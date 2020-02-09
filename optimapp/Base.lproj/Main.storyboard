@@ -38,7 +38,7 @@
                                 <rect key="frame" x="30" y="154" width="354" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-OY-m0B">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54.000000000000057"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="54" id="h5N-RR-xRT"/>
                                         </constraints>
