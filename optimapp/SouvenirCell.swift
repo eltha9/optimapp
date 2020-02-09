@@ -20,12 +20,12 @@ class SouvenirCell: UITableViewCell {
     @IBOutlet weak var jolie: UILabel!
     
     
-    func setCell(souvenir: Souvenir)
+    func setCell(souvenir: SouvenirModel)
     {
-        photoSouvenir.image = UIImage(named: souvenir.image)
+        photoSouvenir.image = UIImage(named: souvenir.main_image)
         
         nom.text = souvenir.title
-        jolie.text = to_date(timestamp: souvenir.souvenirDate)
+        jolie.text = to_date(timestamp: Double(souvenir.date))
     }
     
     func to_date(timestamp: Double)->String

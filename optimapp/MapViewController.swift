@@ -79,9 +79,6 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
         cell.content.text = buttonTypes[indexPath.row]
         return cell
     }
-    
-    
-    
 }
 
 

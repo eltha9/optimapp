@@ -18,17 +18,28 @@ class SouvenirViewController: UIViewController {
     @IBOutlet weak var user_name: UILabel!
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var user_parcour: UILabel!
+      
+    
+//    var souvenirsCells:[Souvenir] = []
+//    var souvenirs:[Souvenir] = []
     
     
-    var souvenirsCells:[Souvenir] = []
-    var souvenirs:[Souvenir] = []
+    var souvenirList = [SouvenirModel](){
+        didSet{
+            DispatchQueue.main.async {
+                self.souvenirTableView.reloadData()
+            }
+        }
+    }
+    
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         tabBarItem = UITabBarItem(title: "Souvenirs", image: UIImage(named: "souvenir_tab_icon"), tag: 1)
         
-        self.souvenirs.append(Souvenir( title: "Plage en Grèce",image: "test_2" ,souvenirDate: 1579205087.00))
-        self.souvenirs.append(Souvenir( title: "Le désert Australien",image: "test_2" ,souvenirDate: 1579213087.00))
+//        self.souvenirs.append(Souvenir( title: "Plage en Grèce",image: "test_2" ,souvenirDate: 1579205087.00))
+//        self.souvenirs.append(Souvenir( title: "Le désert Australien",image: "test_2" ,souvenirDate: 1579213087.00))
         
         Alamofire.request("https://elph.fr/optimapp_back/?q=user").responseJSON { (defaultDataResponse) in
             switch defaultDataResponse.result {
@@ -64,40 +75,51 @@ class SouvenirViewController: UIViewController {
             }
         }
         
-        Alamofire.request("https://elph.fr/optimapp_back/?q=user-events").responseJSON { (defaultDataResponse) in
-            switch defaultDataResponse.result {
-            case .success(let value):
-                
-                let json = JSON(value)
-                do {
-                    
-                    for i in 0...(json["result"].count - 1) {
-                        
-                        self.souvenirs.append(Souvenir(title: json["result"][i]["title"].string! ,image: "test_2" ,souvenirDate: 34.00 ) )
-                        
-                    }
-                    debugPrint(json)
-                    
-                } catch let error {
-                    print("error parsing JSON: \(error)")
-                    
-                }
-
-                
-            case .failure(let error):
-                print("error: \(error)")
-                
-            }
-
-        }
-debugPrint(self.souvenirs)
+//        Alamofire.request("https://elph.fr/optimapp_back/?q=user-events").responseJSON { (defaultDataResponse) in
+//            switch defaultDataResponse.result {
+//            case .success(let value):
+//
+//                let json = JSON(value)
+//                do {
+//
+//                    for i in 0...(json["result"].count - 1) {
+//
+//                        self.souvenirs.append(Souvenir(title: json["result"][i]["title"].string! ,image: "test_2" ,souvenirDate: 34.00 ) )
+//
+//                    }
+//                    debugPrint(json)
+//
+//                } catch let error {
+//                    print("error parsing JSON: \(error)")
+//
+//                }
+//
+//
+//            case .failure(let error):
+//                print("error: \(error)")
+//
+//            }
+//
+//        }
         
+//        debut de la requete au souvenir
+        
+        let souvenirRequete = SouvenirResquest()
+        souvenirRequete.getSouvenirs {[weak self] result in
+            switch result {
+            case .failure(let error):
+                print(error)
+                
+            case .success( let souvenirs ):
+                self?.souvenirList = souvenirs
+            }
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.souvenirsCells = self.souvenirs
+//        self.souvenirsCells = self.souvenirs
         
         souvenirTableView.delegate = self
         souvenirTableView.dataSource = self
@@ -113,25 +135,22 @@ debugPrint(self.souvenirs)
 
 extension SouvenirViewController: UITableViewDataSource, UITableViewDelegate{
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return souvenirsCells.count
+        return souvenirList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let souvenir = self.souvenirsCells[indexPath.row]
+        let souvenir = self.souvenirList[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "souvenirCell") as! SouvenirCell
         
-        cell.setCell(souvenir: souvenir)
+        cell.setCell(souvenir : souvenir)
         
         return cell
     }
 }
 
-class SouvenirService{
-    
-    
-    func getSouvenir(){
-        
-    }
-}
