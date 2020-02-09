@@ -7,15 +7,41 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 class MapViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-//    let buttonTypes: [TypeButton] = [TypeButton("resto","resto")
-//        ,TypeButton("monuments","monuments")
-//        ,TypeButton("insolite","insolite")
-//        ,TypeButton("famille","famille")
-//        ,TypeButton("romantique","romantique")
-//        ,TypeButton("découverte","decouverte")]
-//
+
+    @IBOutlet weak var mainMap: MKMapView!
+    
+    @IBAction func getLocation(_ sender: Any) {
+        
+        if
+           CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+           CLLocationManager.authorizationStatus() ==  .authorizedAlways
+        {
+            self.currentLocation = locManager.location
+            debugPrint(currentLocation.coordinate.longitude)
+            debugPrint(currentLocation.coordinate.latitude)
+            
+            
+            
+            
+            let pinLocation = MKPointAnnotation()
+            pinLocation.coordinate = CLLocationCoordinate2D( latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+            
+            self.mainMap.addAnnotation(pinLocation)
+            
+            let region = MKCoordinateRegion(center: pinLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+            mainMap.setRegion(region, animated: true)
+        }
+        
+        
+    }
+    var locManager = CLLocationManager()
+    
+    
+    
     let buttonTypes: [String] = ["resto"
         ,"monuments"
         ,"insolite"
@@ -33,22 +59,16 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
         
         
     }
+    
+    var currentLocation: CLLocation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.locManager.requestWhenInUseAuthorization()
         // Do any additional setup after loading the view.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return buttonTypes.count
@@ -59,6 +79,9 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
         cell.content.text = buttonTypes[indexPath.row]
         return cell
     }
+    
+    
+    
 }
 
 

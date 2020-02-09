@@ -27,7 +27,8 @@ class SouvenirViewController: UIViewController {
         
         tabBarItem = UITabBarItem(title: "Souvenirs", image: UIImage(named: "souvenir_tab_icon"), tag: 1)
         
-        
+        self.souvenirs.append(Souvenir( title: "Plage en Grèce",image: "test_2" ,souvenirDate: 1579205087.00))
+        self.souvenirs.append(Souvenir( title: "Le désert Australien",image: "test_2" ,souvenirDate: 1579213087.00))
         
         Alamofire.request("https://elph.fr/optimapp_back/?q=user").responseJSON { (defaultDataResponse) in
             switch defaultDataResponse.result {
@@ -69,12 +70,13 @@ class SouvenirViewController: UIViewController {
                 
                 let json = JSON(value)
                 do {
-
-                    for i in 0...(json.count - 1) {
+                    
+                    for i in 0...(json["result"].count - 1) {
                         
-                        self.souvenirs.append(Souvenir(title: json[i]["title"].string! ,image: "test_2" ,souvenirDate: 34.00 ) )
+                        self.souvenirs.append(Souvenir(title: json["result"][i]["title"].string! ,image: "test_2" ,souvenirDate: 34.00 ) )
                         
                     }
+                    debugPrint(json)
                     
                 } catch let error {
                     print("error parsing JSON: \(error)")
@@ -88,14 +90,14 @@ class SouvenirViewController: UIViewController {
             }
 
         }
-
+debugPrint(self.souvenirs)
         
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.souvenirsCells = addSouvenirs()
+        self.souvenirsCells = self.souvenirs
         
         souvenirTableView.delegate = self
         souvenirTableView.dataSource = self
@@ -103,60 +105,10 @@ class SouvenirViewController: UIViewController {
         // round avatar
         avatar.layer.cornerRadius = avatar.frame.size.width / 2
         avatar.clipsToBounds = true
-    }
-
-    
-    func addSouvenirs() -> [Souvenir]
-    {
-      
-        
-//        var temp:[Souvenir] = []
-
-        
-        Alamofire.request("https://elph.fr/optimapp_back/?q=user-events").responseJSON { (defaultDataResponse) in
-            switch defaultDataResponse.result {
-            case .success(let value):
-                
-                let json = JSON(value)
-                do {
-                    for i in 0...(json.count - 1) {
-                        
-                        self.souvenirs.append(Souvenir(title: json[i]["title"].string! ,image: "test_2" ,souvenirDate: 34.00 ) )
-                        
-                    }
-                    
-                    debugPrint(self.souvenirs[0])
-                    
-                } catch let error {
-                    print("error parsing JSON: \(error)")
-                    
-                }
-                
-            case .failure(let error):
-                print("error: \(error)")
-                
-            }
-        }
-        
-//        self.souvenirs.append(Souvenir( title: "Plage en Grèce",image: "test_2" ,souvenirDate: 1579205087.00))
-//        self.souvenirs.append(Souvenir( title: "Le désert Australien",image: "test_2" ,souvenirDate: 1579213087.00))
-//        debugPrint(self.souvenirs)
-        return self.souvenirs
-        
         
     }
 
-//    func jsonToString(json: AnyObject){
-//        do {
-//            let data1 =  try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted) // first of all convert json to the data
-//            let convertedString = String(data: data1, encoding: String.Encoding.utf8) // the data will be converted to the string
-//            print(convertedString) // <-- here is ur string
-//
-//        } catch let myJSONError {
-//            print(myJSONError)
-//        }
-//
-//    }
+   
 }
 
 extension SouvenirViewController: UITableViewDataSource, UITableViewDelegate{
@@ -173,5 +125,13 @@ extension SouvenirViewController: UITableViewDataSource, UITableViewDelegate{
         cell.setCell(souvenir: souvenir)
         
         return cell
+    }
+}
+
+class SouvenirService{
+    
+    
+    func getSouvenir(){
+        
     }
 }

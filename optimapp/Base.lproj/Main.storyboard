@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,7 +38,7 @@
                                 <rect key="frame" x="30" y="154" width="354" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-OY-m0B">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54.000000000000057"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="54" id="h5N-RR-xRT"/>
                                         </constraints>
@@ -440,6 +441,9 @@
                                     <constraint firstAttribute="width" constant="44" id="V4d-Qg-RuB"/>
                                 </constraints>
                                 <state key="normal" image="crosshair"/>
+                                <connections>
+                                    <action selector="getLocation:" destination="DRh-QK-cER" eventType="touchUpInside" id="XWt-GH-4Sx"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HOG-Fh-a9X">
                                 <rect key="frame" x="20" y="108" width="374" height="44"/>
@@ -453,33 +457,33 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="b7w-xf-oWx"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aj3-Sq-I6s">
-                                    <size key="itemSize" width="120" height="44"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ThT-v5-LZB">
+                                    <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menuCell" id="oNr-Ne-Fef" customClass="MapTopTableViewCell" customModule="optimapp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="G7y-Q8-3zL">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1N-ut-eFQ">
-                                                    <rect key="frame" x="39" y="10" width="42" height="24"/>
+                                                    <rect key="frame" x="4" y="13" width="42" height="24"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                        </view>
+                                            <constraints>
+                                                <constraint firstItem="G1N-ut-eFQ" firstAttribute="centerY" secondItem="G7y-Q8-3zL" secondAttribute="centerY" id="Kdb-7c-nc3"/>
+                                                <constraint firstItem="G1N-ut-eFQ" firstAttribute="centerX" secondItem="G7y-Q8-3zL" secondAttribute="centerX" id="Rwe-V7-g5g"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="G1N-ut-eFQ" firstAttribute="centerY" secondItem="oNr-Ne-Fef" secondAttribute="centerY" id="Kdb-7c-nc3"/>
-                                            <constraint firstItem="G1N-ut-eFQ" firstAttribute="centerX" secondItem="oNr-Ne-Fef" secondAttribute="centerX" id="Rwe-V7-g5g"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="content" destination="G1N-ut-eFQ" id="BQw-01-niq"/>
                                         </connections>
@@ -593,6 +597,7 @@
                     <navigationItem key="navigationItem" id="aGm-ht-EhX"/>
                     <connections>
                         <outlet property="goTo" destination="PCc-w6-GAt" id="tZB-7U-Ylt"/>
+                        <outlet property="mainMap" destination="pqR-8C-7c9" id="pwQ-fN-KST"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMM-Fa-aIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
