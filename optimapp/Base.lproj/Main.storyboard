@@ -38,7 +38,7 @@
                                 <rect key="frame" x="30" y="154" width="354" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-OY-m0B">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54.000000000000057"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="54" id="h5N-RR-xRT"/>
                                         </constraints>
@@ -83,6 +83,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Bc-3V-KQV">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="175"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="175" id="EKb-9E-e6R"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plage en Grèce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15k-Pr-x1O">
                                                     <rect key="frame" x="15" y="132.66666666666666" width="142.66666666666666" height="27.333333333333343"/>

@@ -22,7 +22,10 @@ class SouvenirCell: UITableViewCell {
     
     func setCell(souvenir: SouvenirModel)
     {
-        photoSouvenir.image = UIImage(named: souvenir.main_image)
+//        photoSouvenir.image = UIImage(named: souvenir.main_image)
+        let url = URL(string: souvenir.main_image)
+        let data = try? Data(contentsOf: url!)
+        photoSouvenir.image = UIImage(data: data!)
         
         nom.text = souvenir.title
         jolie.text = to_date(timestamp: Double(souvenir.date))

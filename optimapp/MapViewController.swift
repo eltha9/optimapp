@@ -13,7 +13,7 @@ import MapKit
 class MapViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var mainMap: MKMapView!
-    
+    // location manager
     @IBAction func getLocation(_ sender: Any) {
         
         if
@@ -34,12 +34,31 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
             
             let region = MKCoordinateRegion(center: pinLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
             mainMap.setRegion(region, animated: true)
+            
+            self.startUpdatingLocation()
         }
         
         
     }
     var locManager = CLLocationManager()
     
+    func startUpdatingLocation(){
+        self.currentLocation = locManager.location
+        debugPrint(currentLocation.coordinate.longitude)
+        debugPrint(currentLocation.coordinate.latitude)
+        
+        
+        
+        
+        let pinLocation = MKPointAnnotation()
+        pinLocation.coordinate = CLLocationCoordinate2D( latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        
+        self.mainMap.addAnnotation(pinLocation)
+        
+        let region = MKCoordinateRegion(center: pinLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mainMap.setRegion(region, animated: true)
+    }
+    //end location manager
     
     
     let buttonTypes: [String] = ["resto"

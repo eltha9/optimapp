@@ -112,6 +112,7 @@ class SouvenirViewController: UIViewController {
                 
             case .success( let souvenirs ):
                 self?.souvenirList = souvenirs
+                
             }
         }
     }
