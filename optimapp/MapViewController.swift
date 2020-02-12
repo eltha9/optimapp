@@ -42,6 +42,26 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
     var locManager = CLLocationManager()
     
+    func startUpdateLocation(){
+        self.currentLocation = locManager.location
+        debugPrint(currentLocation.coordinate.longitude)
+        debugPrint(currentLocation.coordinate.latitude)
+        
+        
+        
+        
+        let pinLocation = MKPointAnnotation()
+        pinLocation.coordinate = CLLocationCoordinate2D( latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        
+        self.mainMap.addAnnotation(pinLocation)
+        
+        let region = MKCoordinateRegion(center: pinLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mainMap.setRegion(region, animated: true)
+        
+        self.startUpdatingLocation()
+    }
+    
+    //end location manager
     func startUpdatingLocation(){
         self.currentLocation = locManager.location
         debugPrint(currentLocation.coordinate.longitude)

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		DA03688A23CE66AA00491CFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688923CE66AA00491CFC /* MapViewController.swift */; };
 		DA03688C23CE66C400491CFC /* VoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688B23CE66C400491CFC /* VoyageViewController.swift */; };
 		DA03688E23CE6AC900491CFC /* MapTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */; };
+		DA99455123F429EF0052A6B0 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA99455023F429EF0052A6B0 /* Places.swift */; };
 		DAC6F90D23CE702F0093BF4B /* TopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F90C23CE702F0093BF4B /* TopTableView.swift */; };
 		DAC6F90F23D0D3D30093BF4B /* SouvenirCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F90E23D0D3D30093BF4B /* SouvenirCell.swift */; };
 		DAC6F91123D0D8EB0093BF4B /* Souvenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F91023D0D8EB0093BF4B /* Souvenir.swift */; };
@@ -56,6 +57,7 @@
 		DA03688923CE66AA00491CFC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DA03688B23CE66C400491CFC /* VoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageViewController.swift; sourceTree = "<group>"; };
 		DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTopTableViewCell.swift; sourceTree = "<group>"; };
+		DA99455023F429EF0052A6B0 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		DAC6F90C23CE702F0093BF4B /* TopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableView.swift; sourceTree = "<group>"; };
 		DAC6F90E23D0D3D30093BF4B /* SouvenirCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenirCell.swift; sourceTree = "<group>"; };
 		DAC6F91023D0D8EB0093BF4B /* Souvenir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Souvenir.swift; sourceTree = "<group>"; };
@@ -121,7 +123,6 @@
 				20B5B1E67C0751EE406BA92C /* Pods-optimappTests.debug.xcconfig */,
 				473F7D7E06A6A5CB8CB76DF0 /* Pods-optimappTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -162,6 +163,7 @@
 				DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */,
 				DAFD1EE623CC857700E7FC7D /* Info.plist */,
 				DAC6F90E23D0D3D30093BF4B /* SouvenirCell.swift */,
+				DA99455023F429EF0052A6B0 /* Places.swift */,
 			);
 			path = optimapp;
 			sourceTree = "<group>";
@@ -431,6 +433,7 @@
 				DA03688C23CE66C400491CFC /* VoyageViewController.swift in Sources */,
 				DA03688E23CE6AC900491CFC /* MapTopTableViewCell.swift in Sources */,
 				DAC6F90F23D0D3D30093BF4B /* SouvenirCell.swift in Sources */,
+				DA99455123F429EF0052A6B0 /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
