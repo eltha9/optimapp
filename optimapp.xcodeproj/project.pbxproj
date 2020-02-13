@@ -14,6 +14,7 @@
 		DA03688C23CE66C400491CFC /* VoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688B23CE66C400491CFC /* VoyageViewController.swift */; };
 		DA03688E23CE6AC900491CFC /* MapTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */; };
 		DA99455123F429EF0052A6B0 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA99455023F429EF0052A6B0 /* Places.swift */; };
+		DABB94F123F549860025BD8D /* MapCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABB94F023F549860025BD8D /* MapCollectionLayout.swift */; };
 		DAC6F90D23CE702F0093BF4B /* TopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F90C23CE702F0093BF4B /* TopTableView.swift */; };
 		DAC6F90F23D0D3D30093BF4B /* SouvenirCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F90E23D0D3D30093BF4B /* SouvenirCell.swift */; };
 		DAC6F91123D0D8EB0093BF4B /* Souvenir.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F91023D0D8EB0093BF4B /* Souvenir.swift */; };
@@ -58,6 +59,7 @@
 		DA03688B23CE66C400491CFC /* VoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageViewController.swift; sourceTree = "<group>"; };
 		DA03688D23CE6AC900491CFC /* MapTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTopTableViewCell.swift; sourceTree = "<group>"; };
 		DA99455023F429EF0052A6B0 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		DABB94F023F549860025BD8D /* MapCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCollectionLayout.swift; sourceTree = "<group>"; };
 		DAC6F90C23CE702F0093BF4B /* TopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableView.swift; sourceTree = "<group>"; };
 		DAC6F90E23D0D3D30093BF4B /* SouvenirCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouvenirCell.swift; sourceTree = "<group>"; };
 		DAC6F91023D0D8EB0093BF4B /* Souvenir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Souvenir.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				DAFD1EE623CC857700E7FC7D /* Info.plist */,
 				DAC6F90E23D0D3D30093BF4B /* SouvenirCell.swift */,
 				DA99455023F429EF0052A6B0 /* Places.swift */,
+				DABB94F023F549860025BD8D /* MapCollectionLayout.swift */,
 			);
 			path = optimapp;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				DAC6F90D23CE702F0093BF4B /* TopTableView.swift in Sources */,
 				DAC6F91123D0D8EB0093BF4B /* Souvenir.swift in Sources */,
 				DA03688C23CE66C400491CFC /* VoyageViewController.swift in Sources */,
+				DABB94F123F549860025BD8D /* MapCollectionLayout.swift in Sources */,
 				DA03688E23CE6AC900491CFC /* MapTopTableViewCell.swift in Sources */,
 				DAC6F90F23D0D3D30093BF4B /* SouvenirCell.swift in Sources */,
 				DA99455123F429EF0052A6B0 /* Places.swift in Sources */,

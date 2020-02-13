@@ -460,7 +460,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="b7w-xf-oWx"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ThT-v5-LZB">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5LU-0l-t3K">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -468,25 +468,26 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menuCell" id="oNr-Ne-Fef" customClass="MapTopTableViewCell" customModule="optimapp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="G7y-Q8-3zL">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gcS-kq-7qP">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1N-ut-eFQ">
-                                                    <rect key="frame" x="4" y="13" width="42" height="24"/>
+                                                    <rect key="frame" x="29" y="13" width="42" height="24"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="G1N-ut-eFQ" firstAttribute="centerY" secondItem="G7y-Q8-3zL" secondAttribute="centerY" id="Kdb-7c-nc3"/>
-                                                <constraint firstItem="G1N-ut-eFQ" firstAttribute="centerX" secondItem="G7y-Q8-3zL" secondAttribute="centerX" id="Rwe-V7-g5g"/>
+                                                <constraint firstItem="G1N-ut-eFQ" firstAttribute="centerY" secondItem="gcS-kq-7qP" secondAttribute="centerY" id="Kdb-7c-nc3"/>
+                                                <constraint firstItem="G1N-ut-eFQ" firstAttribute="centerX" secondItem="gcS-kq-7qP" secondAttribute="centerX" id="Rwe-V7-g5g"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="customSize" width="100" height="50"/>
                                         <connections>
                                             <outlet property="content" destination="G1N-ut-eFQ" id="BQw-01-niq"/>
                                         </connections>

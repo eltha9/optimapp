@@ -34,6 +34,10 @@ import Foundation
   "address": "2 Avenue du Professeur André Lemierre, Paris"
 },*/
 
+enum PlacesError:Error{
+    case noData
+    case canNotProcess
+}
 
 //main
 struct Places:Decodable{
@@ -73,7 +77,8 @@ struct Photo:Decodable{
 }
 
 // Places request
-struct PlacesRequest{
+
+struct PlacesRequest {
     var urlRequest:URL
     
     init(placeType:String ,latitude:Float, longitude:Float  ){
@@ -81,8 +86,26 @@ struct PlacesRequest{
         self.urlRequest = URL(string: urlTemp)!
     }
     
-    func getPlaces(){
-        
+    func getPlaces(completion: @escaping(Result<[Place], PlacesError>)-> Void ){
+        let dataTask = URLSession.shared.dataTask(with: self.urlRequest) {data , _, _ in
+            guard let json = data  else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            do{
+                let decoder = JSONDecoder()
+                
+                let placesResponse = try decoder.decode(Places.self, from: json)
+                let placesData = placesResponse.result
+                completion(.success(placesData))
+                
+            }catch{
+                completion(.failure(.noData))
+                
+            }
+        }
+        dataTask.resume()
     }
     
 }

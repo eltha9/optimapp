@@ -14,6 +14,8 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
 
     @IBOutlet weak var mainMap: MKMapView!
     // location manager
+    
+    
     @IBAction func getLocation(_ sender: Any) {
         
         if
@@ -36,32 +38,13 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
             mainMap.setRegion(region, animated: true)
             
             self.startUpdatingLocation()
+            
         }
         
         
     }
     var locManager = CLLocationManager()
     
-    func startUpdateLocation(){
-        self.currentLocation = locManager.location
-        debugPrint(currentLocation.coordinate.longitude)
-        debugPrint(currentLocation.coordinate.latitude)
-        
-        
-        
-        
-        let pinLocation = MKPointAnnotation()
-        pinLocation.coordinate = CLLocationCoordinate2D( latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
-        
-        self.mainMap.addAnnotation(pinLocation)
-        
-        let region = MKCoordinateRegion(center: pinLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
-        mainMap.setRegion(region, animated: true)
-        
-        self.startUpdatingLocation()
-    }
-    
-    //end location manager
     func startUpdatingLocation(){
         self.currentLocation = locManager.location
         debugPrint(currentLocation.coordinate.longitude)
@@ -77,7 +60,12 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
         
         let region = MKCoordinateRegion(center: pinLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mainMap.setRegion(region, animated: true)
+        
+        
     }
+    
+
+    
     //end location manager
     
     
@@ -89,6 +77,17 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
         ,"decouverte"]
     
     @IBOutlet weak var goTo: UIButton!
+    
+    var placesList = [Place](){
+        didSet{
+            for place in self.placesList{
+                    self.setPlaceMarker(place: place)
+//                debugPrint(place)
+            }
+            
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -96,7 +95,17 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
         
 //        self.goTo.layer.cornerRadius = self.goTo.frame.width / 2
         
-        
+        let placesRequete = PlacesRequest(placeType: "resto",latitude: 48.845053, longitude:  2.433134)
+        placesRequete.getPlaces {[weak self] result in
+            switch result {
+            case .failure(let error):
+                print(error)
+
+            case .success( let places ):
+                self?.placesList = places
+
+            }
+        }
     }
     
     var currentLocation: CLLocation!
@@ -117,6 +126,20 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath) as! MapTopTableViewCell
         cell.content.text = buttonTypes[indexPath.row]
         return cell
+    }
+    
+    
+    
+    
+    func setPlaceMarker(place: Place){
+        
+        let pinPlace = MKPointAnnotation()
+//        pinPlace.coordinate = CLLocationCoordinate2D( latitude: CLLocationDegrees(place.location.latitude), longitude: CLLocationDegrees(place.location.longitude))
+        
+        pinPlace.coordinate = CLLocationCoordinate2D( latitude: CLLocationDegrees(48.84588), longitude: CLLocationDegrees(2.4282708))
+        pinPlace.title = place.name
+//        self.mainMap.addAnn otation(pinPlace)
+        debugPrint(place)
     }
 }
 
